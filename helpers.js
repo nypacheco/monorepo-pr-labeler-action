@@ -30,7 +30,7 @@ module.exports.listFiles = async function(
   const options = octokit.pulls.listFiles.endpoint.merge({
     owner: eventOwner,
     repo: eventRepo,
-    number: eventIssueNumber
+    pull_number: eventIssueNumber
   })
 
   return await octokit
